@@ -10,5 +10,5 @@ router.register('blog', views.BlogViewSet)
 
 #genericsの汎用viewで作成したviewのurl設定
 urlpatterns = [
-    path('',include(router.urls))
+    path('',include(router.urls)),
 ]

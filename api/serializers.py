@@ -7,4 +7,4 @@ class BlogSerializer(serializers.ModelSerializer):
     created_on = serializers.DateTimeField(format="%Y-%m-%d", read_only=True)
     class Meta:
         model = Blog
-        fields = ('id', 'title', 'img', 'text','create_on')
+        fields = ('id', 'title', 'img', 'text','created_on')

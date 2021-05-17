@@ -2,7 +2,7 @@ from django.db import models
 
 def upload_post_path(instance, filename):
     ext = filename.split('.')[-1]
-    return '/'.join(['posts', str(instance.Blog.id)+str(instance.title)+str(".")+str(ext)])
+    return '/'.join(['posts', str(instance.id)+str(instance.title)+str(".")+str(ext)])
 
 # Create your models here.
 class Blog(models.Model):
