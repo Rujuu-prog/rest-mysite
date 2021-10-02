@@ -4,3 +4,4 @@ djangorestframework
 Pillow
 django-cors-headers
 django-cleanup
+django-environ
