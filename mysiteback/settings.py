@@ -26,7 +26,7 @@ SECRET_KEY = '9s47zdo845=%*b=g6ix!8n7527aqs(_ted^wbmw9iiy267@p&3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -55,7 +55,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "http://0.0.0.0"
 ]
 
 ROOT_URLCONF = 'mysiteback.urls'
@@ -126,8 +127,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/django_static/' 
-STATIC_ROOT = os.path.join(BASE_DIR, 'django_static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-#urlで下記にアクセスするとmediaにアクセスできる
+STATIC_URL = '/static/' 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'django_static')
+STATIC_ROOT = '/usr/share/nginx/html/static/'
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
