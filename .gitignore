@@ -2,6 +2,7 @@
 .vscode/
 __pycache__/
 media/
+api/migrations/
 .env
 
 db.sqlite3
