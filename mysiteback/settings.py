@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+from datetime import datetime 
 from pathlib import Path
 import os
 
@@ -39,12 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders',
     'api.apps.ApiConfig',
+    'corsheaders',
+    'markdownx', 
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,3 +133,13 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #urlで下記にアクセスするとmediaにアクセスできる
 MEDIA_URL = '/media/'
+
+# markdownxのオプション設定
+# MARKDOWNX_MARKDOWN_EXTENSIONS = [
+#     'markdown.extensions.extra',    # テーブル、コードハイライト
+#     'markdown.extensions.toc',      # 目次
+#     'markdown.extensions.nl2br',    # 改行
+# ]
+
+# markdownxの画像保存パス
+MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdownx/%Y/%m/%d')
