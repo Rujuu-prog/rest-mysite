@@ -33,7 +33,7 @@ env.read_env(env_file)
 SECRET_KEY = env('SECRET_KEY')
 
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0', 'rujuu.com']
 
 
 # Application definition
@@ -66,7 +66,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "http://0.0.0.0"
+    "http://0.0.0.0",
+    "https://rujuu.com"
 ]
 
 ROOT_URLCONF = 'mysiteback.urls'
