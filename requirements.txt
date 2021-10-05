@@ -6,3 +6,5 @@ django-cors-headers
 django_cleanup
 django-markdownx
 django-environ
+django-otp
+qrcode
