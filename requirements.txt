@@ -1,4 +1,4 @@
-Django==3.2 LTS
+Django==3.2LTS
 psycopg2-binary
 djangorestframework
 Pillow
